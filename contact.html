@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<htm lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nishant - Developer portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+            integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+        <link href="https://unpkg.com/ionicons@5.5.2/dist/css/ionicons.min.css" rel="stylesheet">
+
+        <style>
+            :root {
+                --primary-color: #6369F5;
+                --secondary-color: #F5F4fa;
+                --text-color: #444444;
+                --white-color: #fff;
+            }
+
+            * {
+                margin: 0;
+                padding: 0;
+                font-family: "Roboto", sans-serif;
+                box-sizing: border-box;
+            }
+
+            html {
+                font-size: 62.5%;
+                /* overflow: hidden; */
+            }
+
+            body {
+                background: var(--secondary-color);
+                height: auto;
+                min-height: 75vh;
+                /* display: flex; */
+                align-items: center;
+                justify-content: center;
+                background-color: var(--secondary-color);
+            }
+
+
+            header {
+                width: 100%;
+                height: 8vh;
+                background: black;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 10rem;
+            }
+
+            .logo {
+                font-size: 2rem;
+                font-weight: 500;
+                color: #fefefe;
+            }
+
+            .hamburger {
+                display: none;
+            }
+
+            .nav-bar ul {
+                display: flex;
+                list-style: none;
+                list-style-type: none;
+
+            }
+
+            .nav-bar ul li a {
+                display: block;
+                color: #fefefe;
+                font-size: 1.6rem;
+                padding: 1rem 2.5rem;
+                border-radius: 5rem;
+                transition: 0.2s;
+                margin: 0 .5rem;
+                text-decoration: none;
+            }
+
+            .nav-bar ul li a:hover {
+                color: #11101b;
+                background: #fefefe;
+            }
+
+            .nav-bar ul li a.active {
+                color: #11101b;
+                background: #fefefe;
+            }
+
+            .firstSection {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                justify-content: space-around;
+                margin-top: 2.3rem;
+                margin-bottom: 2.3rem;
+            }
+
+            .firstSection div {
+                width: 95%;
+            }
+
+            .leftSection {
+                margin-left: 5rem;
+                /* background-color: red; */
+                align-items: center;
+                justify-content: center;
+                width: 100%;
+                font-size: 4.8rem;
+            }
+
+            .heading {
+                align-items: center;
+                justify-content: center;
+                font-size: 3.5rem;
+                font-weight: 600;
+                line-height: 1;
+                color: var(--primary-color);
+                margin-top: 1rem;
+                margin-left: 1rem;
+            }
+
+            .text {
+                font-size: 1.4rem;
+                color: var(--text-color);
+                margin-top: 1rem;
+                margin-left: 1rem;
+            }
+
+            form {
+                margin-top: 2.8rem;
+                margin-left: 1rem;
+                width: 80%;
+
+            }
+
+            .inputBox {
+                position: relative;
+                margin-bottom: 2.8rem;
+            }
+
+            .inputBox input,
+            .inputBox textarea {
+                width: 100%;
+                padding: 1rem;
+                font-size: 1.5rem;
+                border-radius: .5rem;
+                color: var(--text-color);
+                border: .1rem solid;
+                background: var(--secondary-color);
+            }
+
+            .inputBox input::placeholder,
+            .inputBox textarea::placeholder {
+                color: var(--text-color);
+                opacity: 0.5;
+                font-size: 1.2rem;
+            }
+
+            .inputBox:not(.error) input:focus,
+            .inputBox:not(.error) textarea:focus {
+                border-bottom: .1rem solid var(--primary-color);
+            }
+
+            .inputBox textarea {
+                resize: none;
+                height: 15rem;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 1rem 2rem;
+                font-size: 1.6rem;
+                font-weight: 500;
+                border: none;
+                color: var(--white-color);
+                background-color: var(--primary-color);
+                border-radius: 0.5rem;
+                cursor: pointer;
+                transition: 0.5s;
+            }
+
+            .btn:hover {
+                background-color: #4b52d8;
+            }
+
+
+
+            .rightSection img {
+                width: 70%;
+            }
+
+            .contact-info {
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
+                margin-top: 5rem;
+            }
+
+            .infoBox {
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            }
+
+            .infoBox .icon {
+                width: 4rem;
+                height: 4rem;
+                font-size: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+                color: var(--primary-color);
+                border: .1rem solid var(--primary-color);
+            }
+
+            .infoBox .text {
+                margin: 0;
+            }
+
+            .infoBox .text a {
+                text-decoration: none;
+                color: var(--text-color);
+            }
+
+            .social-icons {
+                position: relative;
+                top: 2rem;
+                left: -1rem;
+                display: flex;
+                flex-direction: row;
+                gap: 1rem;
+                padding: 1rem;
+                font-size: 3rem;
+                align-items: center;
+                border-bottom-right-radius: 3rem;
+                color: var(--white-color);
+            }
+
+            .social-icons a {
+                text-decoration: none;
+                color: var(--primary-color);
+            }
+
+            footer {
+                background-color: black;
+                font-size: 1.5rem;
+                color: white;
+            }
+
+            .footer {
+                display: flex;
+                padding: 2.3rem 12.2rem;
+                justify-content: space-evenly;
+
+            }
+
+            .footer ul {
+                list-style: none;
+                width: 120%;
+                background: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .footer-second a {
+                color: white;
+                font-size: 1.5rem;
+                padding: 1rem;
+                margin: 1rem;
+                text-decoration: none;
+            }
+
+            .footer-second a:hover {
+                color: #11101b;
+                background: #fefefe;
+                transition: 0.5s;
+                border-radius: 20%;
+                transition: 0.5s;
+                font-size: 1.8rem;
+            }
+
+
+            .footer-third .icons {
+                display: flex;
+                justify-content: center;
+            }
+
+            .footer-third .icons a {
+                padding: 1rem;
+                margin: 1rem;
+                border-radius: 50%;
+            }
+
+            .footer-third .icons a i {
+                font-size: 2.8rem;
+                color: white;
+                opacity: 0.9;
+            }
+
+            .footer-third .icons a i:hover {
+                font-size: 3.5rem;
+                color: #fefefe;
+                background: #11101b;
+                transition: 0.5s;
+                border-radius: 50%;
+            }
+
+            footer .footer-rights {
+                text-align: center;
+                color: gray;
+                padding: 1.2rem 0;
+            }
+
+            @media only screen and (max-width: 1320px) {
+                header {
+                    padding: 0 5rem;
+                }
+
+                footer {
+                    background-color: black;
+                    font-size: 1.5rem;
+                }
+
+                .footer {
+                    display: flex;
+                    padding: 2.3rem 10rem;
+                    justify-content: space-evenly;
+
+                }
+
+                .footer ul {
+                    list-style: none;
+                    width: 120%;
+                    background: black;
+                    display: block;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+
+                .footer-second a {
+                    color: white;
+                    font-size: 1.5rem;
+                    padding: .2rem;
+                    margin: 1rem;
+                }
+
+                .footer-second a:hover {
+                    color: #11101b;
+                    margin-bottom: 2rem;
+                    background: #fefefe;
+                    transition: 0.5s;
+                    border-radius: 20%;
+                    transition: 0.5s;
+                    font-size: 1.8rem;
+                }
+
+
+                .footer-third .icons {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .footer-third .icons a {
+                    padding: 1rem;
+                    margin: 1rem;
+                    border-radius: 50%;
+                }
+
+                .footer-third .icons a i {
+                    font-size: 2.2rem;
+                    color: white;
+                    opacity: 0.9;
+                }
+
+                .footer-third .icons a i:hover {
+                    font-size: 2.5rem;
+                    color: #fefefe;
+                    background: #11101b;
+                    transition: 0.5s;
+                    border-radius: 50%;
+                }
+
+
+
+                footer .footer-rights {
+                    text-align: center;
+                    color: gray;
+                    padding: 1.2rem 0;
+                }
+            }
+
+            @media only screen and (max-width: 1100px) {
+                header {
+                    padding: 0 3rem;
+                }
+
+                body {
+                    overflow-x: hidden;
+                    overflow-y: visible;
+                }
+
+                .hamburger {
+                    display: block;
+                    cursor: pointer;
+                }
+
+                .hamburger .line {
+                    width: 3rem;
+                    height: 0.3rem;
+                    background: #fefefe;
+                    margin: 0.6rem 0;
+                }
+
+                .nav-bar {
+                    height: 0;
+                    position: absolute;
+                    top: 5.4rem;
+                    left: 0;
+                    right: 0;
+                    width: auto;
+                    background: black;
+                    transition: 0.5s;
+                    z-index: 1;
+                    overflow: hidden;
+
+                }
+
+                .nav-bar.active {
+                    height: 30rem;
+                    background: black;
+                    overflow: hidden;
+
+                }
+
+                .nav-bar ul {
+                    display: block;
+                    width: fit-content;
+                    margin: 8rem auto 0 auto;
+                    text-align: center;
+                    transition: 0.5s;
+                    opacity: 0;
+                }
+
+                .nav-bar.active ul {
+                    opacity: 1;
+                }
+
+                .nav-bar ul li a {
+                    margin-bottom: 1.2rem;
+                    overflow: hidden;
+                }
+
+                .firstSection {
+                    display: block;
+                }
+
+                .rightSection {
+                    margin-left: 5rem;
+                }
+
+                form {
+                    flex-direction: column;
+                    gap: 4rem;
+                    padding: 2rem;
+                    z-index: 0;
+                }
+
+                .contact-info {
+                    margin-top: 4rem;
+                }
+
+                .social-icons {
+                    position: relative;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    max-width: 20rem;
+                    margin: auto;
+                    padding: 1rem 2rem;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    border-radius: 0;
+                }
+
+                footer {
+                    background-color: black;
+                    font-size: 1.5rem;
+                }
+
+                .footer {
+                    display: block;
+                    padding: 2.3rem 10rem;
+                    justify-content: space-evenly;
+
+                }
+
+                .footer ul {
+                    list-style: none;
+                    width: auto;
+                    background: black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 2rem;
+                    margin-top: 2rem;
+                }
+
+                .footer-first {
+                    margin-left: 2rem;
+                }
+
+                .footer-second a {
+                color: white;
+                font-size: 1.2rem;
+                padding: .2rem;
+                margin: 1rem;
+            }
+
+            .footer-second a:hover{
+                color: #11101b;
+                margin-bottom: 2rem;
+                background: #fefefe;
+                transition: 0.5s;
+                border-radius: 20%;
+                transition: 0.5s;
+                font-size: 1.2rem;
+            }
+
+
+                .footer-third .icons {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .footer-third .icons a {
+                    padding: .5rem;
+                    margin: 1rem;
+                    border-radius: 50%;
+                }
+
+                .footer-third .icons a i {
+                    font-size: 2.5rem;
+                    color: white;
+                    opacity: 0.9;
+                }
+
+                .footer-third .icons a i:hover {
+                    font-size: 2.8rem;
+                    color: #fefefe;
+                    background: #11101b;
+                    transition: 0.5s;
+                    border-radius: 50%;
+                }
+
+
+
+                footer .footer-rights {
+                    text-align: center;
+                    color: gray;
+                    padding: 1.2rem 0;
+                    font-size: 1rem;
+                }
+
+            }
+
+            @media only screen and (max-width: 900px) {
+                body {
+                    overflow-x: hidden;
+                }
+
+                header {
+                    padding: 0 3rem;
+                }
+
+                .hamburger {
+                    display: block;
+                    cursor: pointer;
+                }
+
+                .hamburger .line {
+                    width: 3rem;
+                    height: 0.3rem;
+                    background: #fefefe;
+                    margin: 0.6rem 0;
+                }
+
+                .nav-bar {
+                    height: 0;
+                    position: absolute;
+                    top: 5.4rem;
+                    left: 0;
+                    right: 0;
+                    width: auto;
+                    background: black;
+                    transition: 0.5s;
+                    z-index: 1;
+
+                }
+
+                .nav-bar.active {
+                    height: 30rem;
+                    background: black;
+                    overflow: visible;
+
+                }
+
+                .nav-bar ul {
+                    display: block;
+                    width: fit-content;
+                    margin: 8rem auto 0 auto;
+                    text-align: center;
+                    transition: 0.5s;
+                    opacity: 0;
+                }
+
+                .nav-bar.active ul {
+                    opacity: 1;
+                }
+
+                .nav-bar ul li a {
+                    margin-bottom: 1.2rem;
+                }
+
+                .firstSection {
+                    display: block;
+                }
+
+                .rightSection {
+                    margin-left: 5rem;
+                }
+
+                form {
+                    flex-direction: column;
+                    gap: 4rem;
+                    padding: 2rem;
+                    z-index: 0;
+                }
+
+                .contact-info {
+                    margin-top: 4rem;
+                }
+
+                .social-icons {
+                    position: relative;
+                    right: 0;
+                    bottom: 0;
+                    width: 100%;
+                    max-width: 20rem;
+                    margin: auto;
+                    padding: 1rem 2rem;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    border-radius: 0;
+                }
+
+                footer {
+                    background-color: black;
+                    font-size: 1.5rem;
+                }
+
+                .footer {
+                    display: block;
+                    padding: 2.3rem 10rem;
+                    justify-content: space-evenly;
+
+                }
+
+                .footer ul {
+                    list-style: none;
+                    width: auto;
+                    background: black;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    margin-bottom: 2rem;
+                    margin-top: 2rem;
+                }
+
+                .footer-first {
+                    margin-left: 2rem;
+                }
+
+                .footer-second a {
+                    color: #fff;
+                    font-size: .8rem;
+                    padding: .4rem;
+                    margin: 1rem;
+                }
+
+                .footer-second a:hover {
+                    color: white;
+                    background: black;
+                    transition: 0.5s;
+                    border-radius: 20%;
+                    transition: 0.5s;
+                    font-size: .8rem;
+                }
+
+
+
+                .footer-third .icons {
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .footer-third .icons a {
+                    padding: .5rem;
+                    margin: 1rem;
+                    border-radius: 50%;
+                }
+
+                .footer-third .icons a i {
+                    font-size: 2.5rem;
+                    color: white;
+                    opacity: 0.9;
+                }
+
+                .footer-third .icons a i:hover {
+                    font-size: 2.8rem;
+                    color: #fefefe;
+                    background: #11101b;
+                    transition: 0.5s;
+                    border-radius: 50%;
+                }
+
+
+
+                footer .footer-rights {
+                    text-align: center;
+                    color: gray;
+                    padding: 1.2rem 0;
+                    font-size: 1rem;
+                }
+
+            }
+        </style>
+
+    </head>
+
+    <body oncontextmenu="return false;">
+        <header>
+            <div class="logo">Nishant's Portfolio</div>
+            <div class="hamburger">
+                <div class="line"></div>
+                <div class="line"></div>
+
+                <div class="line"></div>
+            </div>
+            <nav class="nav-bar">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="about.html">About</a>
+                    </li>
+                    <li>
+                        <a href="projects.html">Projects</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="active">Contact Me</a>
+                    </li>
+                </ul>
+                </div>
+            </nav>
+        </header>
+
+
+        <main>
+            <section class="firstSection">
+                <div class="leftSection">
+                    <h3 class="heading">Let's Get in Touch!</h3>
+                    <p class="text">we are here for you! How can we help you?</p>
+                    <form action="https://formspree.io/f/xknlolll" method="POST">
+                        <div class="inputBox">
+                            <input type="text" name="name" class="name" placeholder="Enter Your Name" required
+                                autocomplete="off" />
+                        </div>
+                        <div class="inputBox">
+                            <input type="email" name="email" class="email" placeholder="Enter Your E-mail address"
+                                required autocomplete="off" />
+                        </div>
+                        <div class="inputBox">
+                            <input type="tel" name="phone" class="phone" placeholder="Enter Your Phone number"
+                                pattern="[0-9]{5}[0-9]{5}" required autocomplete="off" />
+                        </div>
+                        <div class="inputBox">
+                            <textarea name="message" class="message" placeholder="Enter Your Message..." required
+                                autocomplete="off"></textarea>
+                            <input type="hidden" name="_template" value="basic">
+                        </div>
+                        <button class="btn" type="submit">Submit</button>
+                    </form>
+                </div>
+
+                <div class="rightSection">
+                    <div class="illustratiion">
+                        <img src="./illustration.svg" alt="">
+                    </div>
+                    <div class="contact-info">
+                        <div class="infoBox">
+                            <div class="icon">
+                                <ion-icon name="call"></ion-icon>
+                            </div>
+                            <div class="text">
+                                <a href="tel:+91-9867382514">+91-9867382514</a>
+                            </div>
+                        </div>
+                        <div class="infoBox">
+                            <div class="icon">
+                                <ion-icon name="mail"></ion-icon>
+                            </div>
+                            <div class="text">
+                                <a href="mailto:nishantgathani03@gmail.com">nishantgathani03@gmail.com</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-icons">
+                        <a href="https://github.com/Nishant655">
+                            <ion-icon name="logo-github"></ion-icon>
+                        </a>
+                        <a href="https://www.linkedin.com/in/nishant-gathani-943b37199/">
+                            <ion-icon name="logo-linkedin"></ion-icon>
+                        </a>
+                        <a href="https://www.instagram.com/nishant_gathani/">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        </div>
+
+        </section>
+
+        </main>
+
+        <footer>
+            <div class="footer">
+                <div class="footer-first">
+                    <h3>Nishant's Developer Portfolio</h3>
+                </div>
+                <div class="footer-second">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact Me</a></li>
+                    </ul>
+                </div>
+                <div class="footer-third">
+                    <ol class="icons">
+                        <span><a href="https://github.com/Nishant655"><i class="fab fa-github"></i></a></span>
+                        <span><a href="https://www.linkedin.com/in/nishant-gathani-943b37199/"><i
+                                    class="fab fa-linkedin"></i></a></span>
+                        <span> <a href="https://www.instagram.com/nishant_gathani/"><i
+                                    class="fab fa-instagram"></i></a></span>
+                    </ol>
+
+                </div>
+
+            </div>
+
+            <div class="footer-rights">
+                Copyright &#169; nishantsportfolio.com | All Rights Reserved
+            </div>
+            </div>
+        </footer>
+        <script>
+            hamburger = document.querySelector(".hamburger");
+            hamburger.onclick = function () {
+                navBar = document.querySelector(".nav-bar");
+                navBar.classList.toggle("active");
+            }
+
+        </script>
+        <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+    </body>
+
+    </html>

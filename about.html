@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishant - Developer portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+        integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Fira Sans', sans-serif;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            background: rgba(0, 0, 0, 0.7)url(bg2.jpg);
+            background-size: cover;
+            background-blend-mode: darken;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: top;
+            /* background-color: rgb(0, 0, 33);
+            background-size: cover; */
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            /* overflow: hidden; */
+        }
+
+        header {
+            width: 100%;
+            height: 8vh;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #fefefe;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .nav-bar ul {
+            display: flex;
+        }
+
+        .nav-bar ul li a {
+            display: block;
+            color: #fefefe;
+            font-size: 1.6rem;
+            padding: 1rem 2.5rem;
+            border-radius: 5rem;
+            transition: 0.2s;
+            margin: 0 .5rem;
+        }
+
+        .nav-bar ul li a:hover {
+            color: #11101b;
+            background: #fefefe;
+        }
+
+        .nav-bar ul li a.active {
+            color: #11101b;
+            background: #fefefe;
+        }
+
+        .secondSection {
+
+            justify-content: center;
+            margin-top: 5rem;
+            margin-left: 50rem;
+            margin-right: 10rem;
+            font-size: 1.6rem;
+
+        }
+
+        .aqua {
+            color: rgb(170, 107, 228);
+            font-weight: 500;
+            font-size: 2rem;
+        }
+
+        .text-gray {
+            color: gray;
+            margin: 50rem;
+            font-size: 1.3rem;
+        }
+
+        .thirdSection {
+            margin-top: 5rem;
+            width: 80vw;
+            height: 80vh;
+        }
+
+        .thirdSection h1 {
+            margin-left: 50rem;
+            margin-bottom: 5rem;
+            font-size: 2rem;
+        }
+
+        .thirdSection .box li {
+            list-style: disc;
+        }
+
+        .thirdSection .box ul.first {
+            font-size: 1.8rem;
+            margin-left: 60rem;
+
+        }
+
+        .thirdSection .box ul.second {
+            font-size: 1.4rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            margin-left: 3rem;
+        }
+
+        .thirdSection .box ul.second li {
+            list-style: circle;
+            margin-bottom: 1rem;
+
+        }
+
+        .thirdSection .box ul.third {
+            font-size: 1.4rem;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            margin-left: 3rem;
+
+        }
+
+        .thirdSection .box ul.third li {
+            list-style: circle;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: black;
+            font-size: 1.5rem;
+        }
+
+        .footer {
+            display: flex;
+            padding: 2.3rem 12.2rem;
+            justify-content: space-evenly;
+
+        }
+
+        .footer ul {
+            list-style: none;
+            width: 120%;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-second a {
+            color: white;
+            font-size: 1.5rem;
+            padding: 1rem;
+            margin: 1rem;
+        }
+
+        .footer-second a:hover {
+            color: #11101b;
+            background: #fefefe;
+            transition: 0.5s;
+            border-radius: 20%;
+            transition: 0.5s;
+            font-size: 1.8rem;
+        }
+
+
+        .footer-third .icons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-third .icons a {
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 50%;
+        }
+
+        .footer-third .icons a i {
+            font-size: 2.8rem;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .footer-third .icons a i:hover {
+            font-size: 3.5rem;
+            color: #fefefe;
+            background: #11101b;
+            transition: 0.5s;
+            border-radius: 50%;
+        }
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 1.2rem 0;
+        }
+
+        @media only screen and (max-width: 1320px) {
+            header {
+                padding: 0 5rem;
+            }
+
+            .secondSection {
+
+                justify-content: center;
+                margin-top: 5rem;
+                margin-left: 30rem;
+                margin-right: 3rem;
+                font-size: 1.6rem;
+
+            }
+
+            .aqua {
+                color: rgb(170, 107, 228);
+                font-weight: 500;
+                font-size: 2rem;
+            }
+
+            .text-gray {
+                color: gray;
+                margin: 30rem;
+                font-size: 1.3rem;
+            }
+
+            .thirdSection {
+                margin-top: 5rem;
+                width: 80vw;
+                height: 80vh;
+            }
+
+            .thirdSection h1 {
+                margin-left: 30rem;
+                margin-bottom: 5rem;
+                font-size: 2rem;
+            }
+
+            .thirdSection .box li {
+                list-style: disc;
+            }
+
+            .thirdSection .box ul.first {
+                font-size: 1.8rem;
+                margin-left: 40rem;
+
+            }
+
+            .thirdSection .box ul.second {
+                font-size: 1.4rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                margin-left: 3rem;
+            }
+
+            .thirdSection .box ul.second li {
+                list-style: circle;
+                margin-bottom: 1rem;
+
+            }
+
+            .thirdSection .box ul.third {
+                font-size: 1.4rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                margin-left: 3rem;
+
+            }
+
+            .thirdSection .box ul.third li {
+                list-style: circle;
+                margin-bottom: 1rem;
+            }
+            footer {
+                background-color: black;
+                font-size: 1.5rem;
+            }
+
+            .footer {
+                display: flex;
+                padding: 2.3rem 10rem;
+                justify-content: space-evenly;
+
+            }
+
+            .footer ul {
+                list-style: none;
+                width: auto;
+                background: black;
+                display: block;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .footer-second a {
+                color: white;
+                font-size: 1.5rem;
+                padding: .2rem;
+                margin: 1rem;
+            }
+
+            .footer-second a:hover {
+                color: #11101b;
+                margin-bottom: 2rem;
+                background: #fefefe;
+                transition: 0.5s;
+                border-radius: 20%;
+                transition: 0.5s;
+                font-size: 1.8rem;
+            }
+
+
+            .footer-third .icons {
+                display: flex;
+                justify-content: center;
+            }
+
+            .footer-third .icons a {
+                padding: 1rem;
+                margin: 1rem;
+                border-radius: 50%;
+            }
+
+            .footer-third .icons a i {
+                font-size: 2.2rem;
+                color: white;
+                opacity: 0.9;
+            }
+
+            .footer-third .icons a i:hover {
+                font-size: 2.5rem;
+                color: #fefefe;
+                background: #11101b;
+                transition: 0.5s;
+                border-radius: 50%;
+            }
+
+
+
+            footer .footer-rights {
+                text-align: center;
+                color: gray;
+                padding: 1.2rem 0;
+            }
+
+
+        }
+
+        @media only screen and (max-width: 1100px) {
+            header {
+                padding: 0 3rem;
+            }
+
+            footer {
+                background-color: black;
+                font-size: 1.5rem;
+            }
+
+            .footer {
+                display: flex;
+                padding: 2.3rem 10rem;
+                justify-content: space-evenly;
+
+            }
+
+            .footer ul {
+                list-style: none;
+                width: auto;
+                background: black;
+                display: block;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .footer-second a {
+                color: white;
+                font-size: 1.2rem;
+                padding: .2rem;
+                margin: 1rem;
+            }
+
+            .footer-second a:hover{
+                color: #11101b;
+                margin-bottom: 2rem;
+                background: #fefefe;
+                transition: 0.5s;
+                border-radius: 20%;
+                transition: 0.5s;
+                font-size: 1.2rem;
+            }
+
+
+            .footer-third .icons {
+                display: flex;
+                justify-content: center;
+            }
+
+            .footer-third .icons a {
+                padding: 1rem;
+                margin: 1rem;
+                border-radius: 50%;
+            }
+
+            .footer-third .icons a i {
+                font-size: 2.2rem;
+                color: white;
+                opacity: 0.9;
+            }
+
+            .footer-third .icons a i:hover {
+                font-size: 2.5rem;
+                color: #fefefe;
+                background: #11101b;
+                transition: 0.5s;
+                border-radius: 50%;
+            }
+
+
+
+            footer .footer-rights {
+                text-align: center;
+                color: gray;
+                padding: 1.2rem 0;
+            }
+
+
+        }
+
+        @media only screen and (max-width: 900px) {
+            body {
+                background: rgba(0, 0, 0, 0.7)url(bg2.jpg);
+                background-size: cover;
+                background-blend-mode: darken;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: left;
+                /* background-color: rgb(0, 0, 33);
+            background-size: cover; */
+                color: white;
+                font-family: 'Poppins', sans-serif;
+                /* overflow: hidden; */
+
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+
+            .hamburger .line {
+                width: 3rem;
+                height: 0.3rem;
+                background: #fefefe;
+                margin: 0.6rem 0;
+            }
+
+            .nav-bar {
+                height: 0;
+                position: absolute;
+                top: 5.4rem;
+                left: 0;
+                right: 0;
+                width: auto;
+                background: linear-gradient(to bottom right, rgb(16, 47, 68), rgb(0, 21, 40));
+                transition: 0.5s;
+                overflow: hidden;
+
+            }
+
+            .nav-bar.active {
+                height: 30rem;
+                background: linear-gradient(to bottom right, rgb(16, 47, 68), rgb(0, 21, 40));
+                overflow: hidden;
+            }
+
+            .nav-bar ul {
+                display: block;
+                width: fit-content;
+                margin: 8rem auto 0 auto;
+                text-align: center;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .nav-bar.active ul {
+                opacity: 1;
+            }
+
+            .nav-bar ul li a {
+                margin-bottom: 1.2rem;
+            }
+
+            .secondSection {
+
+                justify-content: center;
+                margin-top: 5rem;
+                margin-left: 10rem;
+                margin-right: 5rem;
+                font-size: 1.4rem;
+
+            }
+
+            .aqua {
+                color: rgb(170, 107, 228);
+                font-weight: 500;
+                font-size: 2rem;
+            }
+
+            .text-gray {
+                color: gray;
+                margin: 10rem;
+                font-size: 1.1rem;
+            }
+
+            .thirdSection {
+                margin-top: 5rem;
+                width: 80vw;
+                height: 80vh;
+            }
+
+            .thirdSection h1 {
+                margin-left: 10rem;
+                margin-bottom: 2rem;
+                font-size: 1.8rem;
+            }
+
+            .thirdSection .box li {
+                list-style: disc;
+            }
+
+            .thirdSection .box ul.first {
+                font-size: 1.5rem;
+                margin-left: 10rem;
+
+            }
+
+            .thirdSection .box ul.second {
+                font-size: 1.4rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                margin-left: 3rem;
+
+            }
+
+            .thirdSection .box ul.second li {
+                list-style: circle;
+                margin-bottom: 1rem;
+
+            }
+
+            .thirdSection .box ul.third {
+                font-size: 1.4rem;
+                margin-top: 1rem;
+                margin-bottom: 1rem;
+                margin-left: 3rem;
+
+            }
+
+            .thirdSection .box ul.third li {
+                list-style: circle;
+                margin-bottom: 1rem;
+            }
+            footer {
+                background-color: black;
+                font-size: 1.5rem;
+            }
+
+            .footer {
+                display: block;
+                padding: 2.3rem 10rem;
+                justify-content: space-evenly;
+
+            }
+
+            .footer ul {
+                list-style: none;
+                width: auto;
+                background: black;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+            }
+
+            .footer-first {
+                margin-left: 2rem;
+            }
+
+            .footer-second a {
+                color: #fff;
+                font-size: .8rem;
+                padding: .4rem;
+                margin: 1rem;
+            }
+
+            .footer-second a:hover {
+                color: white;
+                background: black;
+                transition: 0.5s;
+                border-radius: 20%;
+                transition: 0.5s;
+                font-size: .8rem;
+            }
+
+
+
+            .footer-third .icons {
+                display: flex;
+                justify-content: center;
+            }
+
+            .footer-third .icons a {
+                padding: .5rem;
+                margin: 1rem;
+                border-radius: 50%;
+            }
+
+            .footer-third .icons a i {
+                font-size: 2.5rem;
+                color: white;
+                opacity: 0.9;
+            }
+
+            .footer-third .icons a i:hover {
+                font-size: 2.8rem;
+                color: #fefefe;
+                background: #11101b;
+                transition: 0.5s;
+                border-radius: 50%;
+            }
+
+
+
+            footer .footer-rights {
+                text-align: center;
+                color: gray;
+                padding: 1.2rem 0;
+                font-size: 1rem;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body oncontextmenu="return false;">
+    <header>
+        <div class="logo">Nishant's Portfolio</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html" class="active">About</a>
+                </li>
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Me</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+    <section class="secondSection">
+        <div class="intro">
+            Hello there! I'm <span class="aqua">Nishant Gathani</span>,
+            <div>a passionate and versatile professional with a love for all tech things . As a
+                computer engineer, I thrive on designing and building innovative hardware and software solutions that
+                push
+                the boundaries of what's possible. My expertise as a software engineer enables me to craft robust and
+                efficient applications, while my flair for web development and design allows me to create captivating
+                online
+                experiences. With a keen eye for detail and a creative edge, I also venture into the realm of video
+                editing
+                to bring stories to life through captivating visuals. As a programmer, I am always eager to tackle new
+                challenges and embrace cutting-edge technologies. Welcome to my portfolio, where you can witness the
+                culmination of my diverse skill set and the passion I bring to every project I undertake.</div>
+        </div>
+    </section>
+
+    <section class="thirdSection">
+        <span class="text-gray">What I have done so far</span>
+        <h1>Work Experience</h1>
+        <div class="box">
+            <ul class="first">
+                <li>internship</li>
+                <ul class="second">
+                    <li>Branding Catalyst</li>
+                </ul>
+                <li>Certifications</li>
+                <ul class="third">
+                    <li>Thakur Polytechnic for National Level Quiz Competiton in Web Development using HTML</li>
+                    <li>Thakur College Of Science for State Level Technical Quiz COmpetiton</li>
+                    <li>OpenWeaver training in Building AI Virtual Agent</li>
+                    <li>VCET for attending Robotics Workshop</li>
+                </ul>
+            </ul>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Nishant's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ol class="icons">
+                    <span><a href="https://github.com/Nishant655"><i class="fab fa-github"></i></a></span>
+                    <span><a href="https://www.linkedin.com/in/nishant-gathani-943b37199/"><i
+                                class="fab fa-linkedin"></i></a></span>
+                    <span> <a href="https://www.instagram.com/nishant_gathani/"><i
+                                class="fab fa-instagram"></i></a></span>
+                </ol>
+
+            </div>
+
+        </div>
+
+        <div class="footer-rights">
+            Copyright &#169; nishantsportfolio.com | All Rights Reserved
+        </div>
+        </div>
+    </footer>
+    <script>
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function () {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nishant - Developer portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css"
+        integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'Fira Sans', sans-serif;
+            box-sizing: border-box;
+        }
+
+        html {
+            font-size: 62.5%;
+        }
+
+        body {
+            background: rgba(0, 0, 0, 0.7)url(bg4.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: top;
+            /* background-color: rgb(0, 0, 33);
+            background-size: cover; */
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            /* overflow: hidden; */
+        }
+
+        header {
+            width: 100%;
+            height: 8vh;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 10rem;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 500;
+            color: #fefefe;
+        }
+
+        .hamburger {
+            display: none;
+        }
+
+        .nav-bar ul {
+            display: flex;
+        }
+
+        .nav-bar ul li a {
+            display: block;
+            color: #fefefe;
+            font-size: 1.6rem;
+            padding: 1rem 2.5rem;
+            border-radius: 5rem;
+            transition: 0.2s;
+            margin: 0 .5rem;
+        }
+
+        .nav-bar ul li a:hover {
+            color: #11101b;
+            background: #fefefe;
+        }
+
+        .nav-bar ul li a.active {
+            color: #11101b;
+            background: #fefefe;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .firstSection>div {
+            width: 40%;
+        }
+
+        .leftSection {
+            font-size: 2.8rem;
+            font-weight: 500;
+            margin-top: 10rem;
+            margin-bottom: 47rem;
+        }
+
+        .buttons {
+            margin-top: 2rem;
+            font-size: 1.6rem;
+        }
+
+        .btn {
+            padding: .9rem 1.4rem;
+            border-radius: 2.2rem;
+            color: white;
+            background-color: transparent;
+            border: .2rem solid white;
+            font-weight: 400;
+            font-size: 1.6rem;
+            margin-bottom: 2rem;
+            margin-right: 1rem;
+            cursor: pointer;
+
+        }
+
+        .btn:hover {
+            background-color: transparent;
+            color: rgb(170, 107, 228);
+            transition: 0.4s all;
+            font-size: 1.8rem;
+        }
+
+
+
+        /* for typing text animation effect 1 type */
+        /* .container .text{
+            position: relative;
+            color: #4070f4;
+            font-size: 45px;
+            font-weight: 500;
+        }
+        .container .text.first-text{
+            color: #fff;
+        }
+        .text.sec-text:before{
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(0, 0, 33);
+            border-left: 2px solid #4070f4;
+            animation: animate 4s steps(12) infinite;
+        }
+        @keyframes animate{
+            40%, 60%{
+                left: 100%;
+            }
+            100%{
+                left: 0%;
+            }
+            
+        } */
+        /* for typing text animation effect end*/
+        .rightSection img {
+            width: 80%;
+
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+
+        .text-gray {
+            color: gray;
+
+        }
+
+        .icon ul li {
+            list-style: none;
+        }
+
+        footer {
+            background-color: black;
+            font-size: 1.5rem;
+        }
+
+        .footer {
+            display: flex;
+            padding: 2.3rem 12.2rem;
+            justify-content: space-evenly;
+
+        }
+
+        .footer ul {
+            list-style: none;
+            width: 120%;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .footer-second a {
+            color: white;
+            font-size: 1.5rem;
+            padding: 1rem;
+            margin: 1rem;
+        }
+
+        .footer-second a:hover {
+            color: #11101b;
+            background: #fefefe;
+            transition: 0.5s;
+            border-radius: 20%;
+            transition: 0.5s;
+            font-size: 1.8rem;
+        }
+
+
+        .footer-third .icons {
+            display: flex;
+            justify-content: center;
+        }
+
+        .footer-third .icons a {
+            padding: 1rem;
+            margin: 1rem;
+            border-radius: 50%;
+        }
+
+        .footer-third .icons a i {
+            font-size: 2.8rem;
+            color: white;
+            opacity: 0.9;
+        }
+
+        .footer-third .icons a i:hover {
+            font-size: 3.5rem;
+            color: #fefefe;
+            background: #11101b;
+            transition: 0.5s;
+            border-radius: 50%;
+        }
+
+
+
+        footer .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 1.2rem 0;
+        }
+
+        @media only screen and (max-width: 1320px) {
+            header {
+                padding: 0 5rem;
+            }
+
+            footer {
+                background-color: black;
+                font-size: 1.5rem;
+            }
+
+            .footer {
+                display: flex;
+                padding: 2.3rem 10rem;
+                justify-content: space-evenly;
+
+            }
+
+            .footer ul {
+                list-style: none;
+                width: 120%;
+                background: black;
+                display: block;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .footer-second a {
+                color: white;
+                font-size: 1.5rem;
+                padding: .2rem;
+                margin: 1rem;
+            }
+
+            .footer-second a:hover {
+                color: #11101b;
+                margin-bottom: 2rem;
+                background: #fefefe;
+                transition: 0.5s;
+                border-radius: 20%;
+                transition: 0.5s;
+                font-size: 1.8rem;
+            }
+
+
+            .footer-third .icons {
+                display: flex;
+                justify-content: center;
+            }
+
+            .footer-third .icons a {
+                padding: 1rem;
+                margin: 1rem;
+                border-radius: 50%;
+            }
+
+            .footer-third .icons a i {
+                font-size: 2.2rem;
+                color: white;
+                opacity: 0.9;
+            }
+
+            .footer-third .icons a i:hover {
+                font-size: 2.5rem;
+                color: #fefefe;
+                background: #11101b;
+                transition: 0.5s;
+                border-radius: 50%;
+            }
+
+
+
+            footer .footer-rights {
+                text-align: center;
+                color: gray;
+                padding: 1.2rem 0;
+            }
+        }
+
+        @media only screen and (max-width: 1100px) {
+            body {
+                background: rgba(0, 0, 0, 0.7)url(bg5.jpg);
+                background-blend-mode: darken;
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: top;
+            }
+
+            header {
+                padding: 0 3rem;
+            }
+
+            footer {
+                background-color: black;
+                font-size: 1.5rem;
+            }
+
+            .footer {
+                display: flex;
+                padding: 2.3rem 10rem;
+                justify-content: space-evenly;
+
+            }
+
+            .footer ul {
+                list-style: none;
+                width: 120%;
+                background: black;
+                display: block;
+                align-items: center;
+                justify-content: space-between;
+            }
+
+            .footer-second a {
+                color: white;
+                font-size: 1.2rem;
+                padding: .2rem;
+                margin: 1rem;
+            }
+
+            .footer-second a:hover{
+                color: #11101b;
+                margin-bottom: 2rem;
+                background: #fefefe;
+                transition: 0.5s;
+                border-radius: 20%;
+                transition: 0.5s;
+                font-size: 1.2rem;
+            }
+
+
+            .footer-third .icons {
+                display: flex;
+                justify-content: center;
+            }
+
+            .footer-third .icons a {
+                padding: 1rem;
+                margin: 1rem;
+                border-radius: 50%;
+            }
+
+            .footer-third .icons a i {
+                font-size: 2.2rem;
+                color: white;
+                opacity: 0.9;
+            }
+
+            .footer-third .icons a i:hover {
+                font-size: 2.5rem;
+                color: #fefefe;
+                background: #11101b;
+                transition: 0.5s;
+                border-radius: 50%;
+            }
+
+
+
+            footer .footer-rights {
+                text-align: center;
+                color: gray;
+                padding: 1.2rem 0;
+            }
+        }
+
+        @media only screen and (max-width: 900px) {
+            body {
+                background: rgba(0, 0, 0, 0.7)url(bg5.jpg);
+                background-size: cover;
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-position: top;
+            }
+
+            .hamburger {
+                display: block;
+                cursor: pointer;
+            }
+
+            .hamburger .line {
+                width: 3rem;
+                height: 0.3rem;
+                background: #fefefe;
+                margin: 0.6rem 0;
+            }
+
+            .nav-bar {
+                height: 0;
+                position: absolute;
+                top: 5.4rem;
+                left: 20rem;
+                right: 0;
+                width: 50vw;
+                background: transparent;
+                transition: 0.5s;
+                overflow: hidden;
+
+            }
+
+            .nav-bar.active {
+                height: 30rem;
+                background: transparent;
+                overflow: hidden;
+            }
+
+            .nav-bar ul {
+                display: block;
+                width: fit-content;
+                margin: 8rem auto 0 auto;
+                text-align: center;
+                transition: 0.5s;
+                opacity: 0;
+            }
+
+            .nav-bar.active ul {
+                opacity: 1;
+            }
+
+            .nav-bar ul li a {
+                margin-bottom: 1.2rem;
+            }
+
+            .leftSection {
+                font-size: 2.5rem;
+                font-weight: 500;
+                margin-top: 5rem;
+                margin-bottom: 47rem;
+            }
+
+            .buttons {
+                margin-top: 20rem;
+                font-size: 1.6rem;
+            }
+
+            footer {
+                background-color: black;
+                font-size: 1.5rem;
+            }
+
+            .footer {
+                display: block;
+                padding: 2.3rem 10rem;
+                justify-content: space-evenly;
+
+            }
+
+            .footer ul {
+                list-style: none;
+                width: auto;
+                background: black;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                margin-bottom: 2rem;
+                margin-top: 2rem;
+            }
+
+            .footer-first {
+                margin-left: 2rem;
+            }
+
+            .footer-second a {
+                color: #fff;
+                font-size: .8rem;
+                padding: .4rem;
+                margin: 1rem;
+            }
+
+            .footer-second a:hover {
+                color: white;
+                background: black;
+                transition: 0.5s;
+                border-radius: 20%;
+                transition: 0.5s;
+                font-size: .8rem;
+            }
+
+
+            .footer-third .icons {
+                display: flex;
+                justify-content: center;
+            }
+
+            .footer-third .icons a {
+                padding: .5rem;
+                margin: 1rem;
+                border-radius: 50%;
+            }
+
+            .footer-third .icons a i {
+                font-size: 2.5rem;
+                color: white;
+                opacity: 0.9;
+            }
+
+            .footer-third .icons a i:hover {
+                font-size: 2.8rem;
+                color: #fefefe;
+                background: #11101b;
+                transition: 0.5s;
+                border-radius: 50%;
+            }
+
+
+
+            footer .footer-rights {
+                text-align: center;
+                color: gray;
+                padding: 1.2rem 0;
+                font-size: 1rem;
+            }
+
+        }
+    </style>
+
+</head>
+
+<body oncontextmenu="return false;">
+    <header>
+        <div class="logo">Nishant's Portfolio</div>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <nav class="nav-bar">
+            <ul>
+                <li>
+                    <a href="index.html" class="active">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="projects.html">Projects</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact Me</a>
+                </li>
+            </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, My name is <span class="purple">Nishant</span>
+                <div>and I'm a</div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <a href="CV resume.pdf " target="_blank"><button class="btn">Download CV</button></a>
+                    <a href="contact.html"><button class="btn">Hire Me</button></a>
+                </div>
+
+                <!-- <div class="container">
+                    <span class="text first-text">and I'm a</span>
+                    <div><span class="text sec-text">Programmer</span></div>
+                </div> -->
+
+                <div class="icon">
+                    <ol>
+                        <a href="https://github.com/Nishant655"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/nishant-gathani-943b37199/"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://www.instagram.com/nishant_gathani/"><i class="fab fa-instagram"></i></a>
+                    </ol>
+                </div>
+            </div>
+
+
+            <div class="rightSection">
+                <!-- <img src="bg3.png" alt=""> -->
+            </div>
+            <!-- <script>
+                const text = document.querySelector(".sec-text");
+
+                const textLoad = ()=>{
+                    setTimeout(() => {
+                        text.textContent = "Programmer";
+                    }, 0);
+                    setTimeout(() => {
+                        text.textContent = "Designer";
+                    }, 4000);
+                    setTimeout(() => {
+                        text.textContent = "Web Developer";
+                    }, 8000);
+                    setTimeout(() => {
+                        text.textContent = "Editor";
+                    }, 12000);
+                    setTimeout(() => {
+                        text.textContent = "Freelancer";
+                    }, 16000);
+                    
+                }
+
+                textLoad();
+                setInterval(textLoad,20000);
+            </script> -->
+
+        </section>
+
+    </main>
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Nishant's Developer Portfolio</h3>
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ol class="icons">
+                    <span><a href="https://github.com/Nishant655"><i class="fab fa-github"></i></a></span>
+                    <span><a href="https://www.linkedin.com/in/nishant-gathani-943b37199/"><i
+                                class="fab fa-linkedin"></i></a></span>
+                    <span> <a href="https://www.instagram.com/nishant_gathani/"><i
+                                class="fab fa-instagram"></i></a></span>
+                </ol>
+
+            </div>
+
+        </div>
+
+        <div class="footer-rights">
+            Copyright &#169; nishantsportfolio.com | All Rights Reserved
+        </div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <!-- setup and start animation -->
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Programmer', 'Web Designer', 'Video Editor', 'Web Developer', 'Freelancer'],
+            typeSpeed: 50,
+        });
+        hamburger = document.querySelector(".hamburger");
+        hamburger.onclick = function () {
+            navBar = document.querySelector(".nav-bar");
+            navBar.classList.toggle("active");
+        }
+
+    </script>
+</body>
+
+</html>
